@@ -8,7 +8,7 @@ Exact steps to follow:
 	• To install Centos 7 with Kickstart file we have to do the following:
 		○ Generate ks.cfg file from the internet or any old installed centos 7.
 		○ Make it an iso with this command
-			§ genisoimage -V OEMDRV -o kickstart.iso /myfile/ks.cfg
+			§ genisoimage -V OEMDRV -o kickstart.iso /myfile/ks.cfg - I used WSL2 Ubuntu to run this command.
 			§ This above will create an iso kickstart.iso which we can load to new Hyper-V VM.
 		○ Now we need to add two DVD to the newly created VM.
 			§ 1st one is Centos 7_Installation_DVD
