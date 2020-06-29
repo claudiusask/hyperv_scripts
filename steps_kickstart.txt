@@ -1,0 +1,17 @@
+Exact steps to follow:
+ These were the files i used ( for kickstart file go to ks_katello.cfg and rename it ks.cfg and use it as you like)
+ 1. CentOS-7-x86_64-Everything-2003.iso
+ 2. kickstart.iso
+
+ The steps we have to do on HYPER-V host machine ( the machine we use as a Hyper-V server - I am using windows 10 PRO )
+
+	• To install Centos 7 with Kickstart file we have to do the following:
+		○ Generate ks.cfg file from the internet or any old installed centos 7.
+		○ Make it an iso with this command
+			§ genisoimage -V OEMDRV -o kickstart.iso /myfile/ks.cfg
+			§ This above will create an iso kickstart.iso which we can load to new Hyper-V VM.
+		○ Now we need to add two DVD to the newly created VM.
+			§ 1st one is Centos 7_Installation_DVD
+			§ 2nd one is kickstart.iso
+		○ The new VM will auto pick up the kickstart file to start the auto installation.
+		○ REMEMBER to disable Secure Boot in the settings of the VM.
